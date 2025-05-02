@@ -62,7 +62,7 @@ The module optionally includes a test form at `/admin/config/graphmailer/test` t
 
 ## 🧑‍💻 Support
 
-This module was developed for a specific client use case. For support, please contact the original developer or maintainer. No official support is provided.
+This module was developed for a specific client use case. No official support is provided.
 
 ---
 
