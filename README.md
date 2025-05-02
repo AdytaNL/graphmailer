@@ -1,62 +1,62 @@
-# GraphMailer – Microsoft Graph e-mail plugin voor Drupal
+# GraphMailer – Microsoft Graph email plugin for Drupal
 
-Deze module voegt een mailplugin toe aan Drupal die e-mails verzendt via de Microsoft Graph API. Ze is bedoeld om te gebruiken als mailsysteem voor Webforms of andere modules die Drupal’s mail API gebruiken.
-
----
-
-## ✅ Functies
-
-- Verstuurt e-mails via Microsoft Graph
-- Ondersteunt HTML-body’s
-- Eenvoudige configuratie via Drupal UI
-- Te gebruiken als mailsysteem in combinatie met `Webform`
+This module provides a mail plugin for Drupal that sends emails using the Microsoft Graph API. It is designed to serve as the mail system for Webforms or other modules that rely on Drupal's Mail API.
 
 ---
 
-## 📦 Installatie
+## ✅ Features
 
-1. Plaats de `graphmailer` modulemap in `/modules/custom` van je Drupal-installatie.
-2. Activeer de module via **Beheer > Uitbreidingen**.
-3. Ga naar **Beheer > Configuratie > GraphMailer** (`/admin/config/graphmailer`) en vul het volgende in:
+- Sends emails using Microsoft Graph
+- Supports HTML body content
+- Easy configuration via Drupal UI
+- Integrates with the `Webform` module or others using Drupal's Mail API
+
+---
+
+## 📦 Installation
+
+1. Place the `graphmailer` module folder in `/modules/custom` within your Drupal installation.
+2. Enable the module via **Manage > Extend**.
+3. Go to **Manage > Configuration > GraphMailer** (`/admin/config/graphmailer`) and fill in the following:
    - Tenant ID
    - Client ID
-   - Client Secret *(wordt niet zichtbaar weergegeven na opslaan)*
-   - Afzender e-mailadres (moet een geldig account zijn binnen de tenant)
+   - Client Secret *(will not be displayed after saving)*
+   - From email address (must be a valid account in your tenant)
 
-4. Ga naar **Beheer > Configuratie > E-mail systeem** (`/admin/config/system/mailsystem`) en stel in:
+4. Then go to **Manage > Configuration > Mail System** (`/admin/config/system/mailsystem`) and configure:
    - **Formatter**: `DefaultFormatter`
    - **Sender**: `GraphMailer`
 
-5. Sla de instellingen op.
+5. Save your settings.
 
 ---
 
-## 🔐 Microsoft Azure – Vereisten
+## 🔐 Microsoft Azure – Requirements
 
-Deze module werkt met de **Client Credentials Flow**. De volgende configuratie is nodig in Azure:
+This module uses the **Client Credentials Flow**. In Azure, the following setup is required:
 
-- **App-registratie** met rechten:
+- An **App Registration** with the following permissions:
   - `Mail.Send` (application permission)
-- Een **client secret**
-- Toestemming moet **geadministreerd** zijn door een global admin via Azure portal
+- A **client secret**
+- Consent must be **granted by a global administrator** through the Azure portal
 
 ---
 
-## ⚠️ Opmerkingen
+## ⚠️ Notes
 
-- De module slaat access tokens op in cache (`cache.default`) voor ~55 minuten
-- Foutmeldingen verschijnen in de Drupal log (`admin/reports/dblog`)
-- Alleen HTML-mails worden ondersteund
-- `client_secret` is beveiligd: wordt niet weergegeven na opslaan
-
----
-
-## 🧪 Testen
-
-De module bevat een testformulier op `/admin/config/graphmailer/test` (optioneel beschikbaar). Gebruik dit om te testen of het verzenden werkt.
+- The module caches access tokens (`cache.default`) for approximately 55 minutes
+- Errors are logged in the Drupal log (`/admin/reports/dblog`)
+- Only HTML emails are supported
+- The `client_secret` is securely stored and not displayed after saving
 
 ---
 
-## 🧑‍💻 Ondersteuning
+## 🧪 Testing
 
-Deze module is ontwikkeld op maat voor een specifieke klant. Voor support, contacteer de originele leverancier of beheerder van deze code.
+The module optionally includes a test form at `/admin/config/graphmailer/test` to verify mail delivery functionality.
+
+---
+
+## 🧑‍💻 Support
+
+This module was developed for a specific client use case. For support, please contact the original developer or maintainer. No official support is provided.
