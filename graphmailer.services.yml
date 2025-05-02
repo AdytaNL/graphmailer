@@ -1,0 +1,4 @@
+services:
+  graphmailer.mailer:
+    class: 'Drupal\graphmailer\GraphMailer'
+    arguments: ['@http_client']

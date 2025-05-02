@@ -1,0 +1,16 @@
+graphmailer.settings:
+  type: config_object
+  label: 'GraphMailer settings'
+  mapping:
+    tenant_id:
+      type: string
+      label: 'Tenant ID'
+    client_id:
+      type: string
+      label: 'Client ID'
+    client_secret:
+      type: string
+      label: 'Client Secret'
+    from_address:
+      type: string
+      label: 'From address'

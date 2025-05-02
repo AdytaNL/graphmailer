@@ -1,0 +1,13 @@
+graphmailer.settings:
+  title: 'GraphMailer settings'
+  description: 'Configureer de Microsoft Graph mail instellingen.'
+  parent: system.admin_config_system
+  route_name: graphmailer.settings
+  weight: 0
+
+graphmailer.test:
+  title: 'Test GraphMailer'
+  description: 'Stuur een testmail via GraphMailer.'
+  parent: system.admin_config_system
+  route_name: graphmailer.test
+  weight: 1
