@@ -1,15 +1,27 @@
-# GraphMailer – Microsoft Graph email plugin for Drupal
+# GraphMailer for Drupal
 
-This module provides a mail plugin for Drupal that sends emails using the Microsoft Graph API. It is designed to serve as the mail system for Webforms or other modules that rely on Drupal's Mail API.
+A simple mail plugin for Drupal that sends mail via Microsoft Graph API.
+
+---
+
+## ⚠️ Disclaimer
+
+> This module was developed for internal use. You are free to use or adapt it under the license below, but:
+>
+> - It is **not actively maintained**
+> - **No support** is provided
+> - Use at your own risk
+
+Feel free to submit pull requests if you find ways to improve it — but please understand there is no guarantee of response.
 
 ---
 
 ## ✅ Features
 
-- Sends emails using Microsoft Graph
-- Supports HTML body content
-- Easy configuration via Drupal UI
-- Integrates with the `Webform` module or others using Drupal's Mail API
+- Sends mail using Microsoft Graph via Client Credentials Flow
+- Plug-and-play integration with the Drupal Mail System
+- Configuration via admin UI
+- Supports Webform and other modules using the Mail API
 
 ---
 
@@ -42,15 +54,6 @@ This module uses the **Client Credentials Flow**. In Azure, the following setup 
 
 ---
 
-## ⚠️ Notes
-
-- The module caches access tokens (`cache.default`) for approximately 55 minutes
-- Errors are logged in the Drupal log (`/admin/reports/dblog`)
-- Only HTML emails are supported
-- The `client_secret` is securely stored and not displayed after saving
-
----
-
 ## 🧪 Testing
 
 The module optionally includes a test form at `/admin/config/graphmailer/test` to verify mail delivery functionality.
@@ -60,3 +63,9 @@ The module optionally includes a test form at `/admin/config/graphmailer/test` t
 ## 🧑‍💻 Support
 
 This module was developed for a specific client use case. For support, please contact the original developer or maintainer. No official support is provided.
+
+---
+
+## 📄 License
+
+MIT License
