@@ -67,6 +67,12 @@ This module was developed for a specific client use case. No official support is
 
 ---
 
+## 👤 Author
+
+Lambert
+
+---
+
 ## 📄 License
 
 MIT License
