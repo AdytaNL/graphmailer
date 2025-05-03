@@ -71,6 +71,7 @@ This module was developed for a specific client use case. No official support is
 
 Lambert
 
+[`Adyta.nl`](https://adyta.nl)
 ---
 
 ## 📄 License
